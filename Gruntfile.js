@@ -23,15 +23,26 @@ module.exports = function (grunt) {
                     keepalive: true
                 }
             }
-        }
+        },
+        
+        concurrent: {
+			target: {
+				tasks: ['connect', 'json_server'],
+				options: {
+					logConcurrentOutput: true
+				}
+			}
+		}
     });
 
     // load npm tasks
+    grunt.loadNpmTasks('grunt-concurrent');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-json-server');
 
     // register tasks
-    grunt.registerTask('run', ['json_server', 'connect']);
+    grunt.registerTask('run', ['concurrent']);
     
     // register default task
     grunt.registerTask('default', ['run']);
