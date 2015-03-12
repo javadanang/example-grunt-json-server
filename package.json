@@ -12,8 +12,7 @@
     "grunt": "^0.4.5",
     "grunt-concurrent": "^1.0.0",
     "grunt-contrib-connect": "^0.9.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-json-server": "^0.1.1"
+    "grunt-json-server": "git://github.com/fzaninotto/grunt-json-server.git#c834e50e2151a16930f1378324cf96b91438bdae"
   },
   "engines": {
     "node": ">=0.10.0"

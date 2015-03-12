@@ -37,7 +37,6 @@ module.exports = function (grunt) {
 
     // load npm tasks
     grunt.loadNpmTasks('grunt-concurrent');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-json-server');
 
